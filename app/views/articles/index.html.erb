@@ -1,0 +1,18 @@
+<h1>List of all Articles</h1>
+
+<%= link_to "Store Article", new_article_path %>
+
+<table>
+  <thead>
+    <th>Title</th>
+    <th>Source</th>
+    <th>Abstract</th>
+  </thead>
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.source %></td>
+      <td><%= article.abstract %></td>
+    </tr>
+  <% end %>
+</table>
