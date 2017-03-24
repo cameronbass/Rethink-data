@@ -1,9 +1,14 @@
 <h1>Store any article</h1>
 
-<% form_for @article, new_article_path do |form| %>
+<%= form_for @article, url: new_article_path do |form| %>
+  <%= form.label :title %>
   <%= form.text_field :title %>
+  <%= form.label :publication_date %>
   <%= form.text_field :publication_date %>
+  <%= form.label :source %>
   <%= form.text_field :source %>
+  <%= form.label :abstract %>
   <%= form.text_field :abstract %>
+  
   <%= form.submit %>
 <% end %>
