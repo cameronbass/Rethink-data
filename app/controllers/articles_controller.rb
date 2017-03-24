@@ -4,7 +4,6 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    binding.pry
     @article = Article.create(article_params)
 
     if @article.valid?
@@ -14,6 +13,10 @@ class ArticlesController < ApplicationController
       render :new
       flash[:error] = "Something went wrong"
     end
+  end
+
+  def index
+    @articles = Article.all
   end
 
   private
