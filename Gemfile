@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 
+gem "figaro"
+gem 'fog'
 gem 'carrierwave', '~> 1.0'
 gem 'pry-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
