@@ -13,6 +13,7 @@
       <td><%= article.title %></td>
       <td><%= article.source %></td>
       <td><%= article.abstract %></td>
+      <td><%= link_to "Download", download_article_path(article) %></td>
     </tr>
   <% end %>
 </table>

@@ -19,9 +19,18 @@ class ArticlesController < ApplicationController
     @articles = Article.all
   end
 
+  def download
+    @article = Article.find(params[:id])
+
+    if @article.valid?
+      @article.file.read
+    end
+
+  end
+
   private
 
   def article_params
-    params.require(:article).permit(:title, :source, :abstract, :publication_date)
+    params.require(:article).permit(:title, :source, :abstract, :publication_date, :file)
   end
 end

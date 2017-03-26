@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+gem 'pdfjs_viewer-rails'
 gem "figaro"
 gem 'fog'
 gem 'carrierwave', '~> 1.0'
