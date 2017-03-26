@@ -13,7 +13,8 @@
       <td><%= article.title %></td>
       <td><%= article.source %></td>
       <td><%= article.abstract %></td>
-      <td><%= link_to "Download", download_article_path(article) %></td>
+      <td><%= link_to "Download File", download_article_path(article) %></td>
+      <!-- <%= link_to "display using the full viewer", pdfjs.full_path(file: "/sample.pdf") %> -->
     </tr>
   <% end %>
 </table>

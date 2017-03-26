@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :articles do
     get 'download', on: :member
   end
+
+  mount PdfjsViewer::Rails::Engine => "/pdfjs", as: 'pdfjs'
 end

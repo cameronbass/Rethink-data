@@ -20,12 +20,10 @@ class ArticlesController < ApplicationController
   end
 
   def download
-    @article = Article.find(params[:id])
+    article = Article.find_by(id: params[:id])
 
-    if @article.valid?
-      @article.file.read
-    end
-
+    data = File.read(open("https://s3.us-east-2.amazonaws.com/theranostics-bucket/uploads/#{article[:file]}"))
+    send_data data, filename: "file.pdf", type: "application/pdf", disposition: 'inline', stream: 'true', buffer_size: '4096'
   end
 
   private

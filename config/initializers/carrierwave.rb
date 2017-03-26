@@ -7,5 +7,5 @@ CarrierWave.configure do |config|
   }
   config.storage = :fog
   config.fog_directory  = 'theranostics-bucket'
-  config.fog_public     = false
+  config.fog_public     = true
 end

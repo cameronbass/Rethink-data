@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/MattFenelon/pdfjs_viewer-rails.git
+  revision: 615bfd2a2f31e8e506500716dc47c2891864729e
+  ref: 615bfd2
+  specs:
+    pdfjs_viewer-rails (0.0.8)
+      rails (> 4.2.0)
+      sass-rails (~> 5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -231,9 +240,6 @@ GEM
     nio4r (2.0.0)
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
-    pdfjs_viewer-rails (0.0.9)
-      rails (> 4.2.0)
-      sass-rails (~> 5.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -330,7 +336,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
-  pdfjs_viewer-rails
+  pdfjs_viewer-rails!
   pry-rails
   puma (~> 3.0)
   rails (~> 5.0.1)
