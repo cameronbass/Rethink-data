@@ -7,6 +7,7 @@ end
 
 gem 'ransack'
 gem 'devise'
+gem 'devise_invitable'
 gem 'pdfjs_viewer-rails', :github => 'MattFenelon/pdfjs_viewer-rails', ref:'615bfd2'
 gem "figaro"
 gem 'fog'
