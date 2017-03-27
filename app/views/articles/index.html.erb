@@ -1,20 +1,26 @@
 <h1>List of all Articles</h1>
 
-<%= link_to "Store Article", new_article_path %>
+<%= link_to "Store Article", new_article_path, class: "button" %>
 
-<table>
-  <thead>
+<%= search_form_for(@search, url: articles_path, method: :get) do |f| %>
+  <%= f.text_field :folder_cont, placeholder: "Search by Folder" %>
+  <%= f.submit "Search", class: "button" %>
+<% end %>
+
+<table class="article-table">
+  <thead class="article-table__headers">
     <th>Title</th>
     <th>Source</th>
     <th>Abstract</th>
+    <th>Folder</th>
   </thead>
   <% @articles.each do |article| %>
-    <tr>
+    <tr class="article-table__rows">
       <td><%= article.title %></td>
       <td><%= article.source %></td>
       <td><%= article.abstract %></td>
+      <td><%= article.folder %></td>
       <td><%= link_to "Download File", download_article_path(article) %></td>
-      <!-- <%= link_to "display using the full viewer", pdfjs.full_path(file: "/sample.pdf") %> -->
     </tr>
   <% end %>
 </table>

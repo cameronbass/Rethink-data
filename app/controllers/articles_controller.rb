@@ -16,7 +16,8 @@ class ArticlesController < ApplicationController
   end
 
   def index
-    @articles = Article.all
+    @search = Article.search(params[:q])
+    @articles = @search.result
   end
 
   def download
@@ -29,6 +30,6 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :source, :abstract, :publication_date, :file)
+    params.require(:article).permit(:title, :source, :abstract, :publication_date, :file, :folder)
   end
 end
