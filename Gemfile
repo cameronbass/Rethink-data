@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'ransack'
+gem 'devise'
 gem 'pdfjs_viewer-rails', :github => 'MattFenelon/pdfjs_viewer-rails', ref:'615bfd2'
 gem "figaro"
 gem 'fog'
