@@ -1,23 +1,26 @@
 <%= link_to "Back to List", articles_path %>
 <h1>Store any article</h1>
 
+<div class="new-article-form">
 
-<%= form_for @article, url: articles_path do |form| %>
-  <%= form.label :title %>
-  <%= form.text_field :title %>
-  <%= form.label :publication_date %>
-  <%= form.date_field :publication_date %>
-  <%= form.label :folder %>
-  <%= form.text_field :folder %>
-  <%= form.label :source %>
-  <%= form.text_field :source %>
-  <%= form.label :abstract %>
-  <%= form.text_field :abstract %>
+  <%= form_for @article, url: articles_path do |form| %>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+    <%= form.label :publication_date %>
+    <%= form.date_field :publication_date %>
+    <%= form.label :folder %>
+    <%= form.text_field :folder %>
+    <%= form.label :source %>
+    <%= form.text_field :source %>
+    <%= form.label :abstract %>
+    <%= form.text_field :abstract %>
 
-  <div>
-    <%= form.label :file %><br>
-    <%= form.file_field :file %>
-  </div>
+    <div>
+      <%= form.label :file %><br>
+      <%= form.file_field :file %>
+    </div>
 
-  <%= form.submit %>
-<% end %>
+    <%= form.submit %>
+  <% end %>
+
+</div>

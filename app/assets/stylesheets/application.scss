@@ -50,3 +50,19 @@
     border-bottom: 1px solid #ddd;
   }
 }
+
+//  new article page
+.new_article {
+  width: 170px;
+  margin-left: auto;
+  margin-right: auto;
+  display: table-caption;
+}
+
+.new-article-form {
+  width: 500px;
+
+  label {
+    padding: 20px;
+  }
+}
