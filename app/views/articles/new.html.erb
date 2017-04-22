@@ -1,26 +1,39 @@
 <%= link_to "Back to List", articles_path %>
-<h1>Store any article</h1>
-
 <div class="new-article-form">
+  <h1>Store PDF Articles</h1>
+
 
   <%= form_for @article, url: articles_path do |form| %>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-    <%= form.label :publication_date %>
-    <%= form.date_field :publication_date %>
-    <%= form.label :folder %>
-    <%= form.text_field :folder %>
-    <%= form.label :source %>
-    <%= form.text_field :source %>
-    <%= form.label :abstract %>
-    <%= form.text_field :abstract %>
+    <div class="form-input">
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+    </div>
 
-    <div>
-      <%= form.label :file %><br>
+    <div class="form-input">
+      <%= form.label :publication_date %>
+      <%= form.date_field :publication_date %>
+    </div>
+
+    <div class="form-input">
+      <%= form.label :folder %>
+      <%= form.text_field :folder %>
+    </div>
+
+    <div class="form-input">
+      <%= form.label :source %>
+      <%= form.text_field :source %>
+    </div>
+
+    <div class="form-input">
+      <%= form.label :abstract %>
+      <%= form.text_field :abstract %>
+    </div>
+
+    <div class="form-input">
+      <%= form.label :article_pdf %>
       <%= form.file_field :file %>
     </div>
 
     <%= form.submit %>
   <% end %>
-
 </div>

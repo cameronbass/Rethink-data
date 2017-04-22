@@ -52,17 +52,36 @@
 }
 
 //  new article page
-.new_article {
-  width: 170px;
-  margin-left: auto;
-  margin-right: auto;
-  display: table-caption;
-}
-
 .new-article-form {
   width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
+  h1 {
+    text-align: center;
+    border-bottom: 1px solid;
+  }
+
+  .form-input {
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    border-bottom: 0.5px solid #ddd;
+  }
 
   label {
-    padding: 20px;
+    float: left;
   }
+
+  input {
+    float: right;
+  }
+}
+
+#sign-out {
+  float: right;
+}
+
+#article_file {
+  position: relative;
+  left: 80px;
 }
