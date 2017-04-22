@@ -10,9 +10,8 @@ class ArticlesController < ApplicationController
       redirect_to articles_path
       flash[:notice] = "You've successfully create the article"
     else
-      binding.pry
       redirect_to new_article_path
-      flash[:error] = "Yeah Dog"
+      flash[:error] = "An Error Has Occurred"
     end
   end
 
